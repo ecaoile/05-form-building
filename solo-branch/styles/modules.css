@@ -47,15 +47,28 @@
   font-weight: bold;
   text-decoration: none;
 }
-#article-json {
-  color:#ccc;
-}
 
-#article-export label {
+#article-export {
+  float: right;
+  width:70vw;
+ }
+ 
+ #article-export:after {
+  content: '';
+  display: table-cell;
+  clear: both;
+ }
+ #article-export label {
   font-size: .8em;
   font-style: italic;
   color: #ccc;
-}
+ }
+
+ #article-export input {
+  display: block;
+  opacity: .5;
+ }
+
 
 @media only screen and (min-width: 640px) {
   .icon-menu {

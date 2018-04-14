@@ -60,11 +60,9 @@
         <input id="category" placeholder="Category Name" />
         <textarea id="body"></textarea>
         <label>
-          <input id="publishedOn" type="checkbox" />
+          <input id="publishedOn" value="" type="checkbox" />
           <span>Published?</span>
-          <!-- <input id="publishedOn" placeholder="Publish Date" /> -->
         </label>
-        <!-- <button>Submit new article</button> -->
       </form>
       <!-- DONE: Set up a form to accept user input for a new blog article. Remember that we need:
            1. Article title
@@ -82,6 +80,7 @@
     <section id="article-export">
       <!-- DONE?: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
       <input id="article-json" value="" placeholder="{JSON in da HOUSE!!!!!!!!!!!!!}" readonly />
+      <label>When finalized, copy the above JSON and paste into blogArticles.js</label>
     </section>
 
   </main>

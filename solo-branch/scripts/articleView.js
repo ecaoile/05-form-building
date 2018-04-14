@@ -91,12 +91,32 @@ articleView.initNewArticlePage = () => {
   $('#new-article').on('change', 'input, textarea', articleView.create);
 };
 
+Date.prototype.toDateInputValue = (function () {
+  var local = new Date(this);
+  local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+  return local.toJSON().slice(0, 10);
+});
+
+$(document).ready(function () {
+  //$('#publishedOn').val(new Date().toDateInputValue());
+  $('#publishedOn:checkbox').change(function () {
+    if (this.checked) {
+      $('#publishedOn').val(new Date().toDateInputValue());
+    }
+    else {
+      $('#publishedOn').val('');
+    }
+  });
+});
+
 articleView.create = () => {
   // DONE?: Set up a variable to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
   console.log('ouch');
   $('#articles > *').remove();
   // DONE?: Instantiate an article based on what's in the form fields:
+  /// Here is some voodoo to get today's date for published articles.
+
   let aobj = {
     title: $('#title').val(),
     category: $('#category').val(),
