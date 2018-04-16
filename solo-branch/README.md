@@ -4,3 +4,6 @@ https://stackoverflow.com/questions/6982692/html5-input-type-date-default-value-
 
 Code for toggling between checkbox values:
 https://stackoverflow.com/questions/3442322/jquery-checkbox-event-handling
+
+Code for passing code through marked.js:
+https://stackoverflow.com/questions/14926564/markdown-syntax-highlighting-in-javascript

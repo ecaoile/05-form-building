@@ -55,6 +55,7 @@ articleView.handleMainNav = () => {
   });
 
   $('.main-nav .tab:first').click();
+  console.log('test');
 };
 
 articleView.setTeasers = () => {
