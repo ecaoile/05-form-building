@@ -18,12 +18,6 @@ Article.prototype.toHtml = function () {
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
   // STRETCH - DONE: Pass the article body into the marked.js library to format our Markdown input
-  $(document).ready(function () {
-    $('pre code').each(function (i, block) {
-      hljs.highlightBlock(block);
-    });
-  });
-
   this.body = marked(this.body);
   return template(this);
 };
